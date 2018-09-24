@@ -24,13 +24,13 @@ class Sorter {
   sort(indices) {
     let subArray = [];
     indices.sort(this.defaultComparator);
-    for(var i = 0; i < indices.length; i++) {
+    for(let i = 0; i < indices.length; i++) {
       subArray.push(this.instance[indices[i]]);
     };
 
     subArray.sort(this.comparator);
 
-    for(var i = 0; i < indices.length; i++){
+    for(let i = 0; i < indices.length; i++){
       this.instance.splice(indices[i], 1, subArray[i]);
     };
   }
